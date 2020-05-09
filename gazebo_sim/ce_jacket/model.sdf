@@ -1,0 +1,37 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <model name="ce_jacket">
+    <static>0</static>
+      <!-- Offset the visual by have the base's height. We are not rotating
+           mesh since symmetrical -->
+      <link name="link">
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>100.0</mass>
+          <inertia>
+            <ixx>-0.482946373</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.1141818467</iyy>
+            <iyz>0</iyz>
+            <izz>0.658872094</izz>
+          </inertia>
+
+        </inertial>
+    <collision name='collision'>
+      <geometry>
+        <mesh>
+          <uri>model://ce_jacket/meshes/ce_jacket_reduced_v3.dae</uri>
+        </mesh>
+      </geometry>
+    </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://ce_jacket/meshes/ce_jacket_reduced_v3.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+  </link>
+  </model>
+</sdf>
